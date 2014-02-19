@@ -33,11 +33,8 @@
 #include <syslog.h>
 #include <unistd.h>
 
-#include <postgres.h>
 #include <libpq-fe.h>
 #include <libpq/libpq-fs.h>
-#include <pg_config.h>
-#include <catalog/pg_type.h>
 
 #include <lua.h>
 #include <lauxlib.h>
@@ -48,6 +45,12 @@
 #endif
 
 #include "luapgsql.h"
+
+/* tese constants are defined in catalog/pg_type.h but it is not always
+   installed with client libraries */
+#define NUMERICOID  1700
+#define BOOLOID   16
+#define TEXTOID   25
 
 static size_t
 PQescape(PGconn *conn, char *dst, const char *from, size_t size)
