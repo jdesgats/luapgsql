@@ -1613,6 +1613,7 @@ luaopen_pgsql(lua_State *L)
 		{ "resStatus", res_resStatus },
 		{ "errorMessage", res_errorMessage },
 		{ "errorField", res_errorField },
+                { "clear", res_clear },
 
 		/* Retrieving query result information */
 		{ "ntuples", res_ntuples },
