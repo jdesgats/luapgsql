@@ -1125,7 +1125,7 @@ res_fnumber(lua_State *L)
 {
 	lua_pushinteger(L,
 	    PQfnumber(*(PGresult **)luaL_checkudata(L, 1, RES_METATABLE),
-	    luaL_checkstring(L, 2)) - 1);
+	    luaL_checkstring(L, 2)) + 1);
 	return 1;
 }
 
@@ -1134,7 +1134,7 @@ res_ftable(lua_State *L)
 {
 	lua_pushinteger(L,
 	    PQftable(*(PGresult **)luaL_checkudata(L, 1, RES_METATABLE),
-	    luaL_checkinteger(L, 2)) - 1);
+	    luaL_checkinteger(L, 2) - 1));
 	return 1;
 }
 
@@ -1143,7 +1143,7 @@ res_ftablecol(lua_State *L)
 {
 	lua_pushinteger(L,
 	    PQftablecol(*(PGresult **)luaL_checkudata(L, 1, RES_METATABLE),
-	    luaL_checkinteger(L, 2)) - 1);
+	    luaL_checkinteger(L, 2) - 1) + 1);
 	return 1;
 }
 
@@ -1152,7 +1152,7 @@ res_fformat(lua_State *L)
 {
 	lua_pushinteger(L,
 	    PQfformat(*(PGresult **)luaL_checkudata(L, 1, RES_METATABLE),
-	    luaL_checkinteger(L, 2)) - 1);
+	    luaL_checkinteger(L, 2) - 1));
 	return 1;
 }
 
@@ -1161,7 +1161,7 @@ res_ftype(lua_State *L)
 {
 	lua_pushinteger(L,
 	    PQftype(*(PGresult **)luaL_checkudata(L, 1, RES_METATABLE),
-	    luaL_checkinteger(L, 2)) - 1);
+	    luaL_checkinteger(L, 2) - 1));
 	return 1;
 }
 
@@ -1170,7 +1170,7 @@ res_fmod(lua_State *L)
 {
 	lua_pushinteger(L,
 	    PQfmod(*(PGresult **)luaL_checkudata(L, 1, RES_METATABLE),
-	    luaL_checkinteger(L, 2)) - 1);
+	    luaL_checkinteger(L, 2) - 1));
 	return 1;
 }
 
@@ -1179,7 +1179,7 @@ res_fsize(lua_State *L)
 {
 	lua_pushinteger(L,
 	    PQfsize(*(PGresult **)luaL_checkudata(L, 1, RES_METATABLE),
-	    luaL_checkinteger(L, 2)) - 1);
+	    luaL_checkinteger(L, 2) - 1));
 	return 1;
 }
 
