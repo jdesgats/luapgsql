@@ -19,6 +19,8 @@ build = {
       pgsql = {
          sources = { "luapgsql.c" },
          libraries = { "pq", "bsd" },
+         incdirs = { "$(PGSQL_INCDIR)" },
+         libdirs = { "$(PGSQL_LIBDIR)" },
       },
    }
 }
